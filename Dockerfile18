@@ -87,7 +87,7 @@ RUN apt-get -y --no-install-recommends install texlive-full latex-make latex2htm
  
 # install rust
 RUN apt-get -y --no-install-recommends install rustc cargo
-RUN rustup update
+## RUN rustup update # fail
 
 # install cLisp ;-)
 # https://packages.ubuntu.com/search?suite=default&section=all&arch=any&keywords=lisp&searchon=names
