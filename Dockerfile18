@@ -103,11 +103,13 @@ RUN apt-get -y --no-install-recommends install sbcl
 # http://www.peter-herth.de/ltk/ltkdoc.pdf
 # http://www.peter-herth.de/ltk/ltkdoc/node1.html
 RUN apt-get -y --no-install-recommends install tcl
+#RUN wget https://github.com/herth/ltk/archive/refs/tags/0.992.tar.gz  && \
+#    tar -xvzf 0.992.tar.gz  && \ 
+#    mv ltk-0.992/ltk /cre/lisp/ltk && \
+#    rm -r ltk-0.992 && \ 
+#    rm 0.992.tar.gz
 RUN wget https://github.com/herth/ltk/archive/refs/tags/0.992.tar.gz  && \
-    tar -xvzf 0.992.tar.gz  && \ 
-    mv ltk-0.992/ltk /cre/lisp/ltk && \
-    rm -r ltk-0.992 && \ 
-    rm 0.992.tar.gz
+    tar -xvzf 0.992.tar.gz
 
 # roswell ## lisp https://github.com/roswell/roswell
 ##RUN apt-get -y --no-install-recommends install libcurl3
