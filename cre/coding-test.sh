@@ -7,8 +7,8 @@ fi
 
 cat /cre/versions.txt
 
-if [ ! -f /cre/python-procfile ]; then
-    echo "[FAIL]: File /cre/python-procfile not found!"
+if [ ! -f /cre/coding-procfile ]; then
+    echo "[FAIL]: File /cre/coding-procfile not found!"
     #exit 1
 fi
 
