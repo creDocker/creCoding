@@ -105,7 +105,7 @@ RUN apt-get -y --no-install-recommends install sbcl
 RUN apt-get -y --no-install-recommends install tcl
 RUN wget https://github.com/herth/ltk/archive/refs/tags/0.992.tar.gz  && \
     tar -xvzf 0.992.tar.gz  && \ 
-    mv -r ltk-0.992/ltk /cre/lisp/ && \
+    mv ltk-0.992/ltk /cre/lisp/ltk && \
     rm -r ltk-0.992 && \ 
     rm 0.992.tar.gz
 
@@ -117,17 +117,17 @@ RUN wget https://github.com/herth/ltk/archive/refs/tags/0.992.tar.gz  && \
 
 
 ## Julia: >=20.04
-##         RUN apt-get -y --no-install-recommends install julia 
+RUN apt-get -y --no-install-recommends install julia 
 #Pkg.add("Spark.jl")
 #https://stackoverflow.com/questions/51272077/install-julia-packages-via-command-line/51273146
 ##RUN julia -e 'using Pkg; Pkg.add("Spark.jl")'    ##ERROR
 ## Pkg.add(“IJulia”)
 
-RUN wget https://julialang-s3.julialang.org/bin/linux/x64/1.6/julia-1.6.6-linux-x86_64.tar.gz  && \
-    tar -xvzf julia-1.6.6-linux-x86_64.tar.gz  && \
-    cp -r julia-1.6.6 /opt/  && \
-    ln -s /opt/julia-1.6.6/bin/julia /usr/local/bin/julia  && \
-    rm julia-1.6.6-linux-x86_64.tar.gz
+## RUN wget https://julialang-s3.julialang.org/bin/linux/x64/1.6/julia-1.6.6-linux-x86_64.tar.gz  && \
+##     tar -xvzf julia-1.6.6-linux-x86_64.tar.gz  && \
+##     cp -r julia-1.6.6 /opt/  && \
+##     ln -s /opt/julia-1.6.6/bin/julia /usr/local/bin/julia  && \
+##     rm julia-1.6.6-linux-x86_64.tar.gz
 
 # https://medium.com/@andreaskuhn92/how-to-solve-the-same-numerical-problem-in-7-different-programming-languages-a64daac3ed64
 
