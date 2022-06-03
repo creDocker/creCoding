@@ -86,6 +86,8 @@ RUN apt-get -y --no-install-recommends install r-cran-shiny r-cran-shinybs  r-cr
 
 ## rdwd (https://cran.r-project.org/web/packages/rdwd/index.html)
 ## install.packages("climate")  ; climate ; (https://cran.r-project.org/web/packages/climate/index.html)
+# (apt install libcurl4-openssl-dev?) && install.packages(c("devtools", "roxygen2", "testthat", "usethis", "knitr"))
+
 
 # install Latex
 RUN apt-get -y --no-install-recommends install texlive-full latex-make latex2html python3-latexcodec 
