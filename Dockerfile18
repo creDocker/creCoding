@@ -60,7 +60,7 @@ RUN apt-get -y --no-install-recommends install r-cran-adegraphics r-cran-amore r
 RUN apt-get -y --no-install-recommends install r-cran-colorspace r-cran-data.table r-cran-date r-cran-devtools r-cran-foreach 
 RUN apt-get -y --no-install-recommends install r-cran-formatr r-cran-formula r-cran-ggplot2 r-cran-gmaps r-cran-gnm 
 RUN apt-get -y --no-install-recommends install r-cran-gsl r-cran-highr r-cran-iterators r-cran-its r-cran-jsonlite r-cran-labeling
-RUN apt-get -y --no-install-recommends install r-cran-knitr r-cran-lambda.r r-cran-mapdata r-cran-mapproj r-cran-maps r-cran-maptools r-cran-markdown 
+RUN apt-get -y --no-install-recommends install r-cran-lambda.r r-cran-mapdata r-cran-mapproj r-cran-maps r-cran-maptools  
 RUN apt-get -y --no-install-recommends install r-cran-mcmc r-cran-mcmcpack r-cran-mfilter r-cran-ncdf4 r-cran-nlp r-cran-openssl 
 RUN apt-get -y --no-install-recommends install r-cran-pheatmap r-cran-plotly r-cran-png r-cran-prettyunits r-cran-raster r-cran-rcolorbrewer 
 RUN apt-get -y --no-install-recommends install r-cran-rcpp r-cran-rcurl r-cran-rjson r-cran-rmpi
@@ -70,6 +70,9 @@ RUN apt-get -y --no-install-recommends install r-cran-tidyr r-cran-tm r-cran-utf
 RUN apt-get -y --no-install-recommends install r-cran-vcd r-cran-vcdextra r-cran-vioplot 
 RUN apt-get -y --no-install-recommends install r-cran-wikidatar r-cran-wordcloud r-cran-xml r-cran-xml2 r-cran-xtable r-cran-xts 
 RUN apt-get -y --no-install-recommends install r-cran-shiny r-cran-shinybs  r-cran-shinydashboard r-cran-shinyjs 
+
+RUN apt-get -y --no-install-recommends install pandoc r-cran-rmarkdown r-cran-markdown r-cran-knitr
+# markdown rust-markdown
 
 ## not (yet?) available , 20.04 only 
 
@@ -88,7 +91,7 @@ RUN apt-get -y --no-install-recommends install r-cran-shiny r-cran-shinybs  r-cr
 ## install.packages("climate")  ; climate ; (https://cran.r-project.org/web/packages/climate/index.html)
 
 # install Latex
-RUN apt-get -y --no-install-recommends install texlive-full latex-make latex2html python3-latexcodec 
+RUN apt-get -y --no-install-recommends install texlive-full latex-make latex2html python3-latexcodec texlive-fonts-recommended
  
 # install rust
 RUN apt-get -y --no-install-recommends install rustc cargo
