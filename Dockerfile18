@@ -71,9 +71,7 @@ RUN apt-get -y --no-install-recommends install r-cran-vcd r-cran-vcdextra r-cran
 RUN apt-get -y --no-install-recommends install r-cran-wikidatar r-cran-wordcloud r-cran-xml r-cran-xml2 r-cran-xtable r-cran-xts 
 RUN apt-get -y --no-install-recommends install r-cran-shiny r-cran-shinybs  r-cran-shinydashboard r-cran-shinyjs 
 
-RUN apt-get -y --no-install-recommends install r-cran-markdown r-cran-knitr
-RUN apt-get -y --no-install-recommends install pandoc 
-RUN apt-get -y --no-install-recommends install r-cran-rmarkdown 
+RUN apt-get -y --no-install-recommends install pandoc r-cran-markdown r-cran-knitr
 # markdown rust-markdown
 
 ## not (yet?) available , 20.04 only 
