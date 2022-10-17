@@ -21,6 +21,7 @@ ENV JULIA_VERSION 1.6.6
 ENV RUST_VERSION 1.57.0
 ENV LISP_VERSION 2.0.1
 ENV R_VERSION 3.6.3
+ENV QUARTO_VERSION 1.1.251
 
 LABEL Name="Coding for CRE" \
       CRE=$CRE_VERSION \ 
@@ -73,6 +74,16 @@ RUN apt-get -y --no-install-recommends install r-cran-shiny r-cran-shinybs  r-cr
 
 RUN apt-get -y --no-install-recommends install pandoc r-cran-rmarkdown r-cran-markdown r-cran-knitr
 # markdown rust-markdown
+
+# Install Quarto
+# https://quarto.org
+##RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v$QUARTO_VERSION/quarto-$QUARTO_VERSION-linux-amd64.tar.gz \
+## && tar -C /usr/local/bin -xvzf quarto-$QUARTO_VERSION-linux-amd64.tar.gz \
+## && mv /usr/local/bin/quarto-$QUARTO_VERSION /usr/local/bin/quarto
+## && rm quarto-$QUARTO_VERSION-linux-amd64.tar.gz
+RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v$QUARTO_VERSION/quarto-$QUARTO_VERSION-linux-amd64.deb \
+&& dpkg -i quarto-$QUARTO_VERSION-linux-amd64.deb \
+&& rm quarto-$QUARTO_VERSION-linux-amd64.deb
 
 
 ## not (yet?) available , 20.04 only 
@@ -151,6 +162,8 @@ RUN mkdir -p /cre && touch /cre/versions.txt && \
    echo "$(date +'%F %R') \t  $(julia --version)" >> /cre/versions.txt && \ 
    echo "$(date +'%F %R') \t  $(rustc --version)" >> /cre/versions.txt && \ 
    echo "$(date +'%F %R') \t  $(cargo --version)" >> /cre/versions.txt && \ 
+#   echo "$(date +'%F %R') \t  $(/usr/local/bin/quarto/quarto --version) >> /cre/versions.txt && \
+   echo "$(date +'%F %R') \t  $(/opt/quarto/bin/quarto --version) >> /cre/versions.txt && \
    echo "$(date +'%F %R') \t  $(latex --version | grep Debian)" >> /cre/versions.txt 
 
 COPY cre /cre
