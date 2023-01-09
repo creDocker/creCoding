@@ -110,8 +110,9 @@ RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v$QUARTO_VER
 
 
 # install Latex
-RUN apt-get -y --no-install-recommends install texlive-full latex-make latex2html python3-latexcodec texlive-fonts-recommended
- 
+## RUN apt-get -y --no-install-recommends install texlive-full latex-make latex2html python3-latexcodec texlive-fonts-recommended
+
+
 # install rust
 RUN apt-get -y --no-install-recommends install rustc cargo
 ## RUN rustup update # fail
@@ -173,6 +174,17 @@ RUN mkdir -p /cre && touch /cre/versions.txt && \
    echo "$(date +'%F %R') \t  $(latex --version | grep Debian)" >> /cre/versions.txt 
 
 COPY cre /cre
+
+# move full latex to creImage
+# https://yihui.org/tinytex/faq/
+# https://yihui.org/tinytex/
+
+RUN wget -qO- "https://yihui.org/tinytex/install-unx.sh" | sh -s - --admin --no-path
+RUN ~/.TinyTeX/bin/*/tlmgr path add
+# chown -R root:staff ~/.TinyTeX
+# chmod -R g+w ~/.TinyTeX
+# chmod -R g+wx ~/.TinyTeX/bin 
+
 WORKDIR /cre/code   ##  ??
 #WORKDIR /cre
 
