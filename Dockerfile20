@@ -108,11 +108,6 @@ RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v$QUARTO_VER
 ## install.packages("climate")  ; climate ; (https://cran.r-project.org/web/packages/climate/index.html)
 # (apt install libcurl4-openssl-dev?) && install.packages(c("devtools", "roxygen2", "testthat", "usethis", "knitr"))
 
-
-# install Latex
-## RUN apt-get -y --no-install-recommends install texlive-full latex-make latex2html python3-latexcodec texlive-fonts-recommended
-
-
 # install rust
 RUN apt-get -y --no-install-recommends install rustc cargo
 ## RUN rustup update # fail
@@ -175,7 +170,7 @@ RUN mkdir -p /cre && touch /cre/versions.txt && \
 
 COPY cre /cre
 
-# move full latex to creImage
+# move full latex to creMedia
 # https://yihui.org/tinytex/faq/
 # https://yihui.org/tinytex/
 

@@ -94,9 +94,6 @@ RUN apt-get -y --no-install-recommends install pandoc r-cran-markdown r-cran-kni
 ## rdwd (https://cran.r-project.org/web/packages/rdwd/index.html)
 ## install.packages("climate")  ; climate ; (https://cran.r-project.org/web/packages/climate/index.html)
 
-# install Latex
-RUN apt-get -y --no-install-recommends install texlive-full latex-make latex2html python3-latexcodec texlive-fonts-recommended
- 
 # install rust
 RUN apt-get -y --no-install-recommends install rustc cargo
 ## RUN rustup update # fail
@@ -140,6 +137,16 @@ RUN wget https://julialang-s3.julialang.org/bin/linux/x64/1.6/julia-1.6.6-linux-
 
 # https://medium.com/@andreaskuhn92/how-to-solve-the-same-numerical-problem-in-7-different-programming-languages-a64daac3ed64
 
+# move full latex to creMedia
+# https://yihui.org/tinytex/faq/
+# https://yihui.org/tinytex/
+RUN wget -qO- "https://yihui.org/tinytex/install-unx.sh" | sh -s - --admin --no-path
+RUN ~/.TinyTeX/bin/*/tlmgr path add
+# chown -R root:staff ~/.TinyTeX
+# chmod -R g+w ~/.TinyTeX
+# chmod -R g+wx ~/.TinyTeX/bin 
+
+
 RUN mkdir -p /cre && touch /cre/versions.txt && \ 
    echo "$(date +'%F %R') \t creCoding \t $CRE_VERSION" >> /cre/versions.txt && \
    echo "$(date +'%F %R') \t   numpy \t $(python3 -c 'import numpy; print(numpy.__version__)')" >> /cre/versions.txt && \
@@ -155,6 +162,7 @@ RUN mkdir -p /cre && touch /cre/versions.txt && \
    echo "$(date +'%F %R') \t  $(latex --version | grep Debian)" >> /cre/versions.txt 
 
 COPY cre /cre
+
 WORKDIR /cre/code   ##  ??
 #WORKDIR /cre
 
