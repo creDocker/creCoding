@@ -52,10 +52,10 @@ RUN apt-get  -y --no-install-recommends install python3-numpy python3-scipy pyth
 RUN pip3 install setuptools wheel psutil pipreqs arrow
 RUN pip3 install numpy scipy pandas patsy statsmodels 
 
-## No module named 'gendoc'
-RUN pip3 install --upgrade pip 
-RUN pip3 install gendoc
-RUN pip3 install datatable 
+## No module named 'gendoc' -> 22.04 only
+## RUN pip3 install --upgrade pip 
+## RUN pip3 install gendoc
+## RUN pip3 install datatable 
 
 RUN pip3 install matplotlib seaborn
 RUN pip3 install Flask connexion
@@ -73,6 +73,7 @@ RUN apt-get -y --no-install-recommends install r-cran-colorspace r-cran-data.tab
 RUN apt-get -y --no-install-recommends install r-cran-formatr r-cran-formula r-cran-ggplot2 r-cran-gmaps r-cran-gnm 
 RUN apt-get -y --no-install-recommends install r-cran-gsl r-cran-highr r-cran-iterators r-cran-jsonlite r-cran-labeling
 
+#removed: https://cran.r-project.org/web/packages/its/index.html
 ##RUN apt-get -y --no-install-recommends install r-cran-its
 
 RUN apt-get -y --no-install-recommends install r-cran-lambda.r r-cran-mapdata r-cran-mapproj r-cran-maps r-cran-maptools  
