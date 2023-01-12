@@ -54,6 +54,7 @@ RUN pip3 install numpy scipy pandas patsy statsmodels
 
 ## No module named 'gendoc'
 RUN pip3 install --upgrade pip 
+RUN pip3 install gendoc
 RUN pip3 install datatable 
 
 RUN pip3 install matplotlib seaborn
