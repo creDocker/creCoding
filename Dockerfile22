@@ -4,7 +4,7 @@
 #
 
 # Pull base image.
-FROM tamboraorg/crenode:2022.0
+FROM tamboraorg/creubuntu:2022.0
 
 MAINTAINER Michael Kahle <michael.kahle@yahoo.de>
 
@@ -53,7 +53,8 @@ RUN pip3 install setuptools wheel psutil pipreqs arrow
 RUN pip3 install numpy scipy pandas patsy statsmodels 
 
 ## No module named 'gendoc'
-## RUN pip3 install datatable 
+RUN pip3 install --upgrade pip 
+RUN pip3 install datatable 
 
 RUN pip3 install matplotlib seaborn
 RUN pip3 install Flask connexion
@@ -161,7 +162,7 @@ RUN wget https://julialang-s3.julialang.org/bin/linux/x64/1.8/julia-1.8.1-linux-
 # https://medium.com/@andreaskuhn92/how-to-solve-the-same-numerical-problem-in-7-different-programming-languages-a64daac3ed64
 
 RUN mkdir -p /cre && touch /cre/versions.txt && \ 
-   echo "$(date +'%F %R') \t crePython \t $CRE_VERSION" >> /cre/versions.txt && \
+   echo "$(date +'%F %R') \t creCoding \t $CRE_VERSION" >> /cre/versions.txt && \
    echo "$(date +'%F %R') \t   numpy \t $(python3 -c 'import numpy; print(numpy.__version__)')" >> /cre/versions.txt && \
    echo "$(date +'%F %R') \t   scipy \t $(python3 -c 'import scipy; print(scipy.__version__)')" >> /cre/versions.txt && \
    echo "$(date +'%F %R') \t   pandas \t $(python3 -c 'import pandas; print(pandas.__version__)')" >> /cre/versions.txt && \
