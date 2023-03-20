@@ -34,12 +34,12 @@ jobs:
         with:
           file: ./Dockerfile18
           push: true
-          tags: tamboraorg/crecoding:check18
+          tags: credocker/crecoding:check18
 
       -
         name: Test
         run: |
-          docker run tamboraorg/crecoding:check18 /cre/coding-test.sh  
+          docker run credocker/crecoding:check18 /cre/coding-test.sh  
 
       -
         name: Build and push
@@ -48,5 +48,5 @@ jobs:
         with:
           file: ./Dockerfile18
           push: true
-          tags: tamboraorg/crecoding:2018.0
+          tags: credocker/crecoding:2018.0
 
