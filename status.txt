@@ -70,6 +70,9 @@ Install python modules by file
  * pip freeze > requirements.txt
  * pip list
 
+freeze default packages versions in requirements.coding.txt if not exists!
+(similiar to creAssets npm)
+
 DONE:
 =====
 https://www.scipy.org/
