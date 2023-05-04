@@ -50,7 +50,7 @@ RUN apt-get update && apt-get -y --no-install-recommends install python3-dev pyt
 RUN apt-get  -y --no-install-recommends install python3-numpy python3-scipy python3-matplotlib python3-h5py
 ##RUN pip3 install --upgrade pip 
 RUN pip3 install setuptools wheel psutil pipreqs arrow
-RUN pip3 install numpy scipy pandas patsy statsmodels datatable 
+RUN pip3 install numpy==1.21 scipy pandas patsy statsmodels datatable 
 RUN pip3 install matplotlib seaborn
 RUN pip3 install Flask connexion
 #RUN pip3 install pycurl  #recommended by jupyterlab
