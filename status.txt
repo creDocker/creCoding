@@ -3,6 +3,9 @@ Still in prototype status
 
 Todo:
 =====
+pip3 install beautifulsoup4==4.9
+
+
 https://geocoder.readthedocs.io/providers/GeoNames.html
 pip3 install geocoder
 
