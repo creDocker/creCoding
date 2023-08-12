@@ -10,7 +10,7 @@ creBuild 	 2023.08
    numpy 	 1.21.5
    scipy 	 1.8.0
    pandas 	 2.0.3
-   openCV 	 4.8.0
+   openCV 	 
   R version 4.1.2 (2021-11-01) -- "Bird Hippie"
   sbcl 	 SBCL 2.1.11.debian
   julia version 1.8.1
