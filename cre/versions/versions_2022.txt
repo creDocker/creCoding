@@ -7,9 +7,9 @@ creBuild 	 2023.09
   Python3 	 Python 3.10.12
    Flask 	 Flask 2.2.0
  creCoding 	 2022.0
-   numpy 	 1.25.2
+   numpy 	 1.26.0
    scipy 	 1.8.0
-   pandas 	 2.1.0
+   pandas 	 2.1.1
    openCV 	 4.8.0
   R version 4.1.2 (2021-11-01) -- "Bird Hippie"
   sbcl 	 SBCL 2.1.11.debian
