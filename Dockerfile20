@@ -53,8 +53,9 @@ RUN apt-get update && apt-get -y --no-install-recommends install python3-dev pyt
 RUN apt-get  -y --no-install-recommends install python3-numpy python3-scipy python3-matplotlib python3-h5py
 ##RUN pip3 install --upgrade pip 
 RUN pip3 install setuptools wheel psutil pipreqs arrow
-RUN pip3 install numpy==1.19 scipy rtree==0.9.4 pandas==1.2 geopandas==0.6 patsy statsmodels datatable xlrd==1.2 openpyxl==3.0
+# https://github.com/cgoldberg/xvfbwrapper
 RUN pip3 install matplotlib==3.3 seaborn plotly==5.9 kaleido xvfbwrapper
+RUN pip3 install numpy==1.19 scipy rtree==0.9.4 pandas==1.2 geopandas==0.6 patsy statsmodels datatable xlrd==1.2 openpyxl==3.0
 RUN pip3 install Flask connexion beautifulsoup4==4.9
 #RUN pip3 install pycurl  #recommended by jupyterlab
 
