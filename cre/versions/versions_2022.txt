@@ -7,7 +7,7 @@ creBuild 	 2023.10
   Python3 	 Python 3.10.12
    Flask 	 
  creCoding 	 2022.0
-   numpy 	 1.26.0
+   numpy 	 1.26.1
    scipy 	 1.8.0
    pandas 	 2.1.1
    openCV 	 4.8.1
