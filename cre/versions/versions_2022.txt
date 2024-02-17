@@ -1,5 +1,5 @@
 creBuild 	 2024.02
- creUbuntu 	 22.04.3 LTS
+ creUbuntu 	 22.04.4 LTS
   UbuntuName 	 jammy
   OpenSSL 3.0.2 15 Mar 2022 (Library: OpenSSL 3.0.2 15 Mar 2022)
   msmtp version 1.8.16
@@ -14,6 +14,6 @@ creBuild 	 2024.02
   R version 4.1.2 (2021-11-01) -- "Bird Hippie"
   sbcl 	 SBCL 2.1.11.debian
   julia version 1.8.1
-  rustc 1.72.1 (d5c2e9c34 2023-09-13) (built from a source tarball)
-  cargo 1.72.1
+  rustc 1.73.0 (cc66ad468 2023-10-03) (built from a source tarball)
+  cargo 1.73.0
   
