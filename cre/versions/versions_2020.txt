@@ -4,7 +4,7 @@ creBuild 	 2024.02
   OpenSSL 1.1.1f  31 Mar 2020
   Java 	 openjdk version "11.0.21" 2023-10-17
   Python3 	 Python 3.8.10
-   Flask 	 Flask 3.0.1
+   Flask 	 Flask 3.0.2
  creCoding 	 2020.0
    numpy 	 1.19.0
    scipy 	 1.9.3
@@ -13,6 +13,6 @@ creBuild 	 2024.02
   R version 3.6.3 (2020-02-29) -- "Holding the Windsock"
   sbcl 	 SBCL 2.0.1.debian
   julia version 1.4.1
-  rustc 1.71.1 (eb26296b5 2023-08-03) (built from a source tarball)
-  cargo 1.71.1
+  rustc 1.72.1 (d5c2e9c34 2023-09-13) (built from a source tarball)
+  cargo 1.72.1
   
