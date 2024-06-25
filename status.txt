@@ -5,6 +5,7 @@ Todo:
 =====
 pip3 install beautifulsoup4==4.9
 
+https://pingouin-stats.org/build/html/index.html
 
 https://geocoder.readthedocs.io/providers/GeoNames.html
 pip3 install geocoder
@@ -13,6 +14,8 @@ https://www.twilio.com/blog/2017/08/geospatial-analysis-python-geojson-geopandas
 pip3 install shapely==1.5.17
 pip3 install geopandas==0.6.0
 ##pip3 install geojsonio==0.0.3
+
+https://physipy.readthedocs.io/en/latest/
 
 Deep-Translator
 
@@ -75,6 +78,8 @@ Install python modules by file
 
 freeze default packages versions in requirements.coding.txt if not exists!
 (similiar to creAssets npm)
+
+https://blog.jetbrains.com/pycharm/2024/06/how-to-move-from-pandas-to-polars/
 
 DONE:
 =====
