@@ -64,6 +64,8 @@ https://www.digitalocean.com/community/tutorials/how-to-install-r-on-ubuntu-18-0
 # R -e "install.packages('rmarkdown')"
 # R -e "rmarkdown::render('knitr_example.Rmd')"
 
+https://www.r-bloggers.com/2024/07/shockingly-fast-data-manipulation-in-r-with-polars/
+
 R(+python+julia) quarto:
 https://quarto.org/
 (http://hbiostat.org/rflow/, https://www.fharrell.com/)
