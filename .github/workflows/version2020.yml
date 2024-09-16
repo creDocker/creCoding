@@ -27,8 +27,12 @@ jobs:
       - name: cp version.txt
 #        run: (cp /cre/versions.txt cre/versions/versions_2020.txt) 
         run: (cut -f2,3 /cre/versions.txt > cre/versions/versions_2020.txt)
+#
+      - name: mkdir python
+        run: (mkdir -p cre/python)
       - name: cp requirements.txt
         run: (cat /cre/python/requirements.txt > cre/python/requirements.txt)
+#
       - name: Submit changes       
         uses: EndBug/add-and-commit@v9
         with:
