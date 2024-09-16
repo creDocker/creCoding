@@ -30,6 +30,8 @@ jobs:
 #
       - name: mkdir python
         run: (mkdir -p cre/python)
+      - name: init python
+        run: (/cre/init-python.sh)
       - name: cp requirements.txt
         run: (cat /cre/python/requirements.txt > cre/python/requirements.txt)
 #
