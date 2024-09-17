@@ -9,6 +9,7 @@ creBuild 	 2024.09
    numpy 	 1.24.4
    scipy 	 1.9.3
    pandas 	 2.0.3
+   geopandas 	 0.6.0
    openCV 	 4.10.0
   R version 3.6.3 (2020-02-29) -- "Holding the Windsock"
   sbcl 	 SBCL 2.0.1.debian
