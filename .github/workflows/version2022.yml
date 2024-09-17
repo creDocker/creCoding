@@ -29,7 +29,6 @@ jobs:
         run: (cut -f2,3 /cre/versions.txt > cre/versions/versions_2022.txt)
 #
       - name: set current year
-        id: year
         run: (echo "CURRENT_YEAR=$(date +'%Y.0')" >> $GITHUB_ENV) 
       - name: cat requirements.txt
         run: (cat /cre/requirements.txt.orig) 
