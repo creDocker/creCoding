@@ -33,7 +33,9 @@ jobs:
       - name: init python
         run: (/cre/init-python.sh)
       - name: cp requirements.txt
-        run: (cat /cre/python/requirements.txt > cre/python/requirements.txt)
+        run: (cp /cre/python/requirements.txt cre/python/requirements.txt)
+      - name: cat requirements.txt
+        run: (cat /cre/python/requirements.txt) 
 #
       - name: Submit changes       
         uses: EndBug/add-and-commit@v9
