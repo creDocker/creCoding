@@ -181,6 +181,7 @@ COPY cre /cre
 # https://yihui.org/tinytex/faq/
 # https://yihui.org/tinytex/
 
+#RUN wget -qO- --timeout 900 "https://yihui.org/tinytex/install-unx.sh" | sh -s - --admin --no-path
 RUN wget -qO- "https://yihui.org/tinytex/install-unx.sh" | sh -s - --admin --no-path
 RUN ~/.TinyTeX/bin/*/tlmgr path add
 # chown -R root:staff ~/.TinyTeX
