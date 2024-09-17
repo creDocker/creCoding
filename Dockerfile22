@@ -172,11 +172,15 @@ RUN wget https://julialang-s3.julialang.org/bin/linux/x64/1.8/julia-1.8.1-linux-
 
 # https://medium.com/@andreaskuhn92/how-to-solve-the-same-numerical-problem-in-7-different-programming-languages-a64daac3ed64
 
+# Freeze python requirements here:
+RUN pip3 freeze --no-cache-dir > /cre/requirements.txt.orig
+
 RUN mkdir -p /cre && touch /cre/versions.txt && \ 
    echo "$(date +'%F %R') \t creCoding \t $CRE_VERSION" >> /cre/versions.txt && \
    echo "$(date +'%F %R') \t   numpy \t $(python3 -c 'import numpy; print(numpy.__version__)')" >> /cre/versions.txt && \
    echo "$(date +'%F %R') \t   scipy \t $(python3 -c 'import scipy; print(scipy.__version__)')" >> /cre/versions.txt && \
    echo "$(date +'%F %R') \t   pandas \t $(python3 -c 'import pandas; print(pandas.__version__)')" >> /cre/versions.txt && \
+   echo "$(date +'%F %R') \t   geopandas \t $(python3 -c 'import geopandas; print(geopandas.__version__)')" >> /cre/versions.txt && \
    echo "$(date +'%F %R') \t   openCV \t $(python3 -c 'import cv2; print(cv2.__version__)')" >> /cre/versions.txt && \
    echo "$(date +'%F %R') \t  $(R --version | grep 'R version')" >> /cre/versions.txt && \ 
    echo "$(date +'%F %R') \t  sbcl \t $(sbcl --version)" >> /cre/versions.txt && \ 
