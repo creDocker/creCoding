@@ -30,7 +30,6 @@ jobs:
 #
       - name: set current year
         id: year
-        run: (echo "::set-output name=date::$(date +'%Y.0')") 
         run: (echo "CURRENT_YEAR=$(date +'%Y.0')" >> $GITHUB_ENV) 
       - name: cat requirements.txt
         run: (cat /cre/requirements.txt.orig) 
