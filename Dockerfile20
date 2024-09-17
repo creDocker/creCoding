@@ -158,6 +158,9 @@ RUN apt-get -y --no-install-recommends install julia
 
 # https://medium.com/@andreaskuhn92/how-to-solve-the-same-numerical-problem-in-7-different-programming-languages-a64daac3ed64
 
+# Try freeze here:
+RUN pip3 freeze --no-cache-dir > /cre/python/requirements2.txt
+
 RUN mkdir -p /cre && touch /cre/versions.txt && \ 
    echo "$(date +'%F %R') \t creCoding \t $CRE_VERSION" >> /cre/versions.txt && \
    echo "$(date +'%F %R') \t   numpy \t $(python3 -c 'import numpy; print(numpy.__version__)')" >> /cre/versions.txt && \
