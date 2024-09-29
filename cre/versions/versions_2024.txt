@@ -9,7 +9,7 @@ creBuild 	 2024.09
  creCoding 	 2024.0
    numpy 	 1.26.4
    scipy 	 1.11.4
-   pandas 	 2.2.2
+   pandas 	 2.2.3
    geopandas 	 1.0.1
    openCV 	 4.10.0
   R version 4.3.3 (2024-02-29) -- "Angel Food Cake"
