@@ -89,8 +89,8 @@ RUN apt-get -y --no-install-recommends install pandoc r-cran-rmarkdown r-cran-ma
 
 
 #csvwr
-RUN apt-get -y --no-install-recommends install r-cran-csvwr
-#RUN R -e "install.packages('csvwr')"
+#RUN apt-get -y --no-install-recommends install r-cran-csvwr
+RUN R -e "install.packages('csvwr')"
 
 
 # Install Quarto
