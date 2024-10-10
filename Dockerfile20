@@ -67,7 +67,7 @@ RUN pip3 install opencv-python
 
 # install R
 # https://packages.ubuntu.com/search?suite=default&section=all&arch=any&keywords=r-cran-c&searchon=names
-RUN apt-get -y --no-install-recommends install liblapack-dev gfortran
+RUN apt-get -y --no-install-recommends install liblapack-dev gfortran cmake
 RUN apt-get -y --no-install-recommends install r-base r-recommended 
 RUN apt-get -y --no-install-recommends install r-cran-adegraphics r-cran-amore r-cran-animation r-cran-cli  
 RUN apt-get -y --no-install-recommends install r-cran-colorspace r-cran-data.table r-cran-date r-cran-devtools r-cran-foreach 
