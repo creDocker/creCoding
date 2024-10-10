@@ -85,6 +85,12 @@ RUN apt-get -y --no-install-recommends install r-cran-shiny r-cran-shinybs  r-cr
 RUN apt-get -y --no-install-recommends install pandoc r-cran-markdown r-cran-knitr
 # markdown rust-markdown
 
+# Handle csv meta data csv for web
+# https://pypi.org/project/csvw/
+# https://csvw.org/standards.html
+#RUN apt-get -y --no-install-recommends install r-cran-csvwr  #not working...
+RUN R -e "install.packages('csvwr')"
+
 ## not (yet?) available , 20.04 only 
 
 ## https://www.rplumber.io/
