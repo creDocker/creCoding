@@ -68,6 +68,7 @@ RUN pip3 install Flask connexion beautifulsoup4
 #RUN pip3 install pycurl  #recommended by jupyterlab
 # https://pingouin-stats.org/build/html/index.html
 RUN pip3 install pingouin
+RUN pip3 install selenium
 
 # OpenCV
 RUN apt-get -y --no-install-recommends  install python3-opencv
