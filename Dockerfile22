@@ -64,7 +64,7 @@ RUN pip3 install matplotlib seaborn plotly kaleido xvfbwrapper
 # rtree==0.9.4 & geopandas==0.6 & xlrd==1.2 & openpyxl==3.0 ??
 RUN pip3 install numpy scipy rtree pandas geopandas patsy statsmodels xlrd openpyxl
 # https://rpy2.github.io
-Run pip3 rpy2
+Run pip3 install rpy2
 # beautifulsoup4==4.9 ??
 RUN pip3 install Flask connexion beautifulsoup4
 #RUN pip3 install pycurl  #recommended by jupyterlab
@@ -192,6 +192,7 @@ RUN mkdir -p /cre && touch /cre/versions.txt && \
    echo "$(date +'%F %R') \t   pandas \t $(python3 -c 'import pandas; print(pandas.__version__)')" >> /cre/versions.txt && \
    echo "$(date +'%F %R') \t   geopandas \t $(python3 -c 'import geopandas; print(geopandas.__version__)')" >> /cre/versions.txt && \
    echo "$(date +'%F %R') \t   openCV \t $(python3 -c 'import cv2; print(cv2.__version__)')" >> /cre/versions.txt && \
+   echo "$(date +'%F %R') \t   rpy2 \t $(python3 -c 'import rpy2; print(rpy2.__version__)')" >> /cre/versions.txt && \
    echo "$(date +'%F %R') \t  $(R --version | grep 'R version')" >> /cre/versions.txt && \ 
    echo "$(date +'%F %R') \t  sbcl \t $(sbcl --version)" >> /cre/versions.txt && \ 
 #   echo "$(date +'%F %R') \t  $(ros --version 2>&1)" >> /cre/versions.txt && \ 
