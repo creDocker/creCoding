@@ -12,6 +12,7 @@ creBuild 	 2024.11
    pandas 	 2.2.3
    geopandas 	 1.0.1
    openCV 	 4.10.0
+   rpy2 	 3.5.17
   R version 4.1.2 (2021-11-01) -- "Bird Hippie"
   sbcl 	 SBCL 2.1.11.debian
   julia version 1.8.1
