@@ -12,6 +12,7 @@ creBuild 	 2024.12
    pandas 	 2.2.3
    geopandas 	 1.0.1
    openCV 	 4.10.0
+   rpy2 	 3.5.17
   R version 4.3.3 (2024-02-29) -- "Angel Food Cake"
   sbcl 	 SBCL 2.2.9.debian
   julia version 1.8.1
