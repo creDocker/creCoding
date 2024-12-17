@@ -96,9 +96,11 @@ RUN apt-get -y --no-install-recommends install r-cran-tidyr r-cran-tm r-cran-utf
 RUN apt-get -y --no-install-recommends install r-cran-vcd r-cran-vcdextra r-cran-vioplot 
 RUN apt-get -y --no-install-recommends install r-cran-wikidatar r-cran-wordcloud r-cran-xml r-cran-xml2 r-cran-xtable r-cran-xts 
 RUN apt-get -y --no-install-recommends install r-cran-shiny r-cran-shinybs  r-cran-shinydashboard r-cran-shinyjs 
-
 RUN apt-get -y --no-install-recommends install pandoc r-cran-rmarkdown r-cran-markdown r-cran-knitr
 # markdown rust-markdown
+
+# statistics
+RUN apt-get -y --no-install-recommends install r-cran-mgcv
 
 # Handle csv meta data csv for web
 # https://pypi.org/project/csvw/
