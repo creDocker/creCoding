@@ -7,7 +7,7 @@ creBuild 	 2025.01
   Python3 	 Python 3.10.12
    Flask 	 
  creCoding 	 2022.0
-   numpy 	 2.2.1
+   numpy 	 2.2.2
    scipy 	 1.8.0
    pandas 	 2.2.3
    geopandas 	 1.0.1
