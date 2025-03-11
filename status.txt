@@ -5,7 +5,11 @@ Todo:
 =====
 pip3 install beautifulsoup4==4.9
 
+https://lxml.de/   #scraping   apt-get install python3-lxml
+
 https://pingouin-stats.org/build/html/index.html
+
+https://erdantic.drivendata.org/stable/
 
 https://geocoder.readthedocs.io/providers/GeoNames.html
 pip3 install geocoder
@@ -82,6 +86,10 @@ freeze default packages versions in requirements.coding.txt if not exists!
 (similiar to creAssets npm)
 
 https://blog.jetbrains.com/pycharm/2024/06/how-to-move-from-pandas-to-polars/
+
+https://www.kdnuggets.com/7-powerful-python-decorators-to-level-up-your-coding-game
+https://www.kdnuggets.com/python-tooling-beyond-pandas-libraries-to-broaden-your-data-science-toolkit
+https://docs.jax.dev/en/latest/
 
 DONE:
 =====
