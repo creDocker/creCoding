@@ -12,6 +12,10 @@ creBuild 	 2025.05
    scipy 	 1.8.0
    geopandas 	 1.0.1
    openCV 	 4.11.0
+ creCoding 	 2022.0
+   scipy 	 1.8.0
+   geopandas 	 1.0.1
+   openCV 	 4.11.0
    rpy2 	 3.5.17
   R version 4.1.2 (2021-11-01) -- "Bird Hippie"
   sbcl 	 SBCL 2.1.11.debian
