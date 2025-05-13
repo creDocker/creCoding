@@ -14,6 +14,8 @@ ARG BUILD_TAG=latest
 
 # version: yyyy.n for stable versions / 0.yyyy for development
 
+ENV NODE_VERSION 14
+
 ENV JULIA_VERSION 1.6.6
 ENV RUST_VERSION 1.57.0
 ENV LISP_VERSION 1.4.5
@@ -28,6 +30,10 @@ LABEL Name="Coding for CRE" \
       Version=$PYTHON_VERSION \
       OS="Ubuntu:$UBUNTU_VERSION" \
       Build_=$BUILD_TAG 
+
+# Install nodejs
+RUN curl -sL "https://deb.nodesource.com/setup_${NODE_VERSION}.x" | bash - && apt-get install -y nodejs ## npm included in nodejs
+#RUN apt-get update && apt-get install -y nodejs npm  ## npm not included in nodejs
 
 # install R
 # https://packages.ubuntu.com/search?suite=default&section=all&arch=any&keywords=r-cran-c&searchon=names
@@ -138,6 +144,8 @@ RUN mkdir -p /cre && \
 
 RUN mkdir -p /cre && touch /cre/versions.txt && \ 
    echo "$(date +'%F %R') \t creCoding \t $CRE_VERSION" >> /cre/versions.txt && \
+   echo "$(date +'%F %R') \t   ldd \t $(ldd --version | grep GLIBC)" >> /cre/versions.txt && \
+   echo "$(date +'%F %R') \t   node \t $(node --version)" >> /cre/versions.txt && \
    echo "$(date +'%F %R') \t   rpy2 \t $(python3 -c 'import rpy2; print(rpy2.__version__)')" >> /cre/versions.txt && \
    echo "$(date +'%F %R') \t   $(R --version | grep 'R version')" >> /cre/versions.txt && \ 
    echo "$(date +'%F %R') \t   TinyTEX \t $(R -e 'library(tinytex); tinytex::tlmgr_version()' | grep 'TeX Live')" >> /cre/versions.txt && \ 
