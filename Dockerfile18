@@ -19,6 +19,8 @@ ENV RUST_VERSION 1.57.0
 ENV LISP_VERSION 1.4.5
 ENV R_VERSION 3.4.4
 
+ENV TINYTEX_VERSION 2020.10
+
 LABEL Name="Coding for CRE" \
       CRE=$CRE_VERSION \ 
       Year=$BUILD_YEAR \
@@ -121,6 +123,9 @@ RUN wget https://julialang-s3.julialang.org/bin/linux/x64/1.6/julia-1.6.6-linux-
 # move full latex to creMedia
 # https://yihui.org/tinytex/faq/
 # https://yihui.org/tinytex/
+# https://github.com/rstudio/tinytex-releases/releases
+# https://github.com/rstudio/tinytex-releases
+
 RUN wget -qO- "https://yihui.org/tinytex/install-unx.sh" | sh -s - --admin --no-path
 RUN ~/.TinyTeX/bin/*/tlmgr path add
 # chown -R root:staff ~/.TinyTeX
@@ -135,6 +140,7 @@ RUN mkdir -p /cre && touch /cre/versions.txt && \
    echo "$(date +'%F %R') \t creCoding \t $CRE_VERSION" >> /cre/versions.txt && \
    echo "$(date +'%F %R') \t   rpy2 \t $(python3 -c 'import rpy2; print(rpy2.__version__)')" >> /cre/versions.txt && \
    echo "$(date +'%F %R') \t  $(R --version | grep 'R version')" >> /cre/versions.txt && \ 
+   echo "$(date +'%F %R') \t  TinyTEX \t $(R -e 'library(tinytex); tinytex::tlmgr_version()' | grep 'TeX Live'" >> /cre/versions.txt && \ 
    echo "$(date +'%F %R') \t  sbcl \t $(sbcl --version)" >> /cre/versions.txt && \ 
 #   echo "$(date +'%F %R') \t  $(ros --version 2>&1)" >> /cre/versions.txt && \ 
    echo "$(date +'%F %R') \t  $(julia --version)" >> /cre/versions.txt && \ 
