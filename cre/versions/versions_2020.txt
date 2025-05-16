@@ -16,10 +16,10 @@ creBuild 	 2025.05
    openCV 	 4.11.0
  creCoding 	 2020.0
    rpy2 	 3.5.17
-  R version 3.6.3 (2020-02-29) -- "Holding the Windsock"
-  TinyTEX 	 
-  sbcl 	 SBCL 2.0.1.debian
-  julia version 1.4.1
-  rustc 1.75.0 (82e1608df 2023-12-21) (built from a source tarball)
-  cargo 1.75.0
-  
+   R version 3.6.3 (2020-02-29) -- "Holding the Windsock"
+   TinyTEX 	 
+   sbcl 	 SBCL 2.0.1.debian
+   julia version 1.4.1
+   rustc 1.75.0 (82e1608df 2023-12-21) (built from a source tarball)
+   cargo 1.75.0
+   
