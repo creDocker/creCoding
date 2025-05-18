@@ -18,10 +18,29 @@ creBuild 	 2025.05
    openCV 	 4.11.0
  creCoding 	 2024.0
    rpy2 	 3.5.17
-  R version 4.3.3 (2024-02-29) -- "Angel Food Cake"
-  TinyTEX 	 
-  sbcl 	 SBCL 2.2.9.debian
-  julia version 1.8.1
-  rustc 1.75.0 (82e1608df 2023-12-21) (built from a source tarball)
-  cargo 1.75.0
-  
+   R version 4.3.3 (2024-02-29) -- "Angel Food Cake"
+   TinyTEX 	 
+R version 4.3.3 (2024-02-29) -- "Angel Food Cake"
+Copyright (C) 2024 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> library(tinytex); tinytex::tlmgr_version()
+   sbcl 	 SBCL 2.2.9.debian
+   julia version 1.8.1
+   rustc 1.75.0 (82e1608df 2023-12-21) (built from a source tarball)
+   cargo 1.75.0
+   
