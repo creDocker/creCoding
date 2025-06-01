@@ -1,4 +1,4 @@
-creBuild 	 2025.05
+creBuild 	 2025.06
  creUbuntu 	 24.04.2 LTS
   UbuntuName 	 noble
   OpenSSL 3.0.13 30 Jan 2024 (Library: OpenSSL 3.0.13 30 Jan 2024)
@@ -17,7 +17,7 @@ creBuild 	 2025.05
    beautifulsoup4 	 
    openCV 	 4.11.0
  creCoding 	 2024.0
-   rpy2 	 3.5.17
+   rpy2 	 
    R version 4.3.3 (2024-02-29) -- "Angel Food Cake"
    TinyTEX 	 
 R version 4.3.3 (2024-02-29) -- "Angel Food Cake"
