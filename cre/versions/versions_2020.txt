@@ -15,7 +15,7 @@ creBuild 	 2025.05
    beautifulsoup4 	 
    openCV 	 4.11.0
  creCoding 	 2020.0
-   rpy2 	 3.5.17
+   rpy2 	 
    R version 3.6.3 (2020-02-29) -- "Holding the Windsock"
    TinyTEX 	 
    sbcl 	 SBCL 2.0.1.debian
