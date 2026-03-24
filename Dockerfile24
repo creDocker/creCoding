@@ -92,7 +92,7 @@ RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v$QUARTO_VER
 # (apt install libcurl4-openssl-dev?) && install.packages(c("devtools", "roxygen2", "testthat", "usethis", "knitr"))
 
 # https://rpy2.github.io
-Run pip3 install rpy2
+Run uv pip install rpy2
 
 # install rust
 RUN apt-get -y --no-install-recommends install rustc cargo
@@ -141,11 +141,11 @@ RUN wget https://julialang-s3.julialang.org/bin/linux/x64/1.8/julia-1.8.1-linux-
 
 # Freeze python requirements here:
 RUN mkdir -p /cre && \ 
-    pip3 freeze --no-cache-dir > /cre/requirements.txt.orig
+    uv pip freeze --no-cache-dir > /cre/requirements.txt.orig
 
 RUN mkdir -p /cre && touch /cre/versions.txt && \ 
    echo "$(date +'%F %R') \t creCoding \t $CRE_VERSION" >> /cre/versions.txt && \
-   echo "$(date +'%F %R') \t   rpy2 \t $(python3 -c 'import rpy2; print(rpy2.__version__)')" >> /cre/versions.txt && \
+   echo "$(date +'%F %R') \t   rpy2 \t $(uv run python -c 'import rpy2; print(rpy2.__version__)')" >> /cre/versions.txt && \
    echo "$(date +'%F %R') \t   $(R --version | grep 'R version')" >> /cre/versions.txt && \ 
    echo "$(date +'%F %R') \t   TinyTEX \t $(R -e 'library(tinytex); tinytex::tlmgr_version()' )" >> /cre/versions.txt && \ 
    echo "$(date +'%F %R') \t   sbcl \t $(sbcl --version)" >> /cre/versions.txt && \ 
