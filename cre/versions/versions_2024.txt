@@ -1,4 +1,4 @@
-creBuild 	 2026.07
+creBuild 	 2026.08
  creUbuntu 	 24.04.4 LTS
   UbuntuName 	 noble
   OpenSSL 3.0.13 30 Jan 2024 (Library: OpenSSL 3.0.13 30 Jan 2024)
@@ -8,7 +8,7 @@ creBuild 	 2026.07
    uv 	 
    uv2 	 
    numpy 	 2.5.1
-   pandas 	 3.0.3
+   pandas 	 3.0.5
    Flask 	 
  crePython 	 2024.0
    scipy 	 1.18.0
